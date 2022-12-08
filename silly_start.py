@@ -10,6 +10,6 @@ const $ = new Env("启动傻妞");
 
 if __name__ == '__main__':
     print('启动中')
-    os.system('cd /root/sillyGirl && ./sillyGirl -d')
+    os.system('cd /usr/local/sillyGirl && ./sillyGirl -d')
     sleep(8)
     print('命令执行完成')
