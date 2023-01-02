@@ -9,6 +9,6 @@ from time import sleep
 
 if __name__ == '__main__':
     print('启动中')
-    os.system('cd /root && ./go-cqhttp -d')
+    os.system('cd /root/go-cqhttp && ./go-cqhttp -d')
     sleep(8)
     print('命令执行完成')
