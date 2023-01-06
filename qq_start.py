@@ -9,6 +9,9 @@ from time import sleep
 
 if __name__ == '__main__':
     print('启动中')
+    print('杀死进程')
+    os.system('pkill go-cqhttp')
+    sleep(5)
     os.system('cd /root/go-cqhttp && ./go-cqhttp -d')
-    sleep(8)
+    sleep(5)
     print('命令执行完成')
