@@ -9,6 +9,6 @@ from time import sleep
 
 if __name__ == '__main__':
     print('启动中')
-    os.system('nsenter --mount=/host/proc/1/ns/mnt bash -c "cd /usr && ls"')
+    os.system('nsenter --mount=/host/proc/1/ns/mnt bash -c "cd /usr && sh start.sh"')
     sleep(8)
     print('命令执行完成')
