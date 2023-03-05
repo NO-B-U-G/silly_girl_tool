@@ -5,5 +5,7 @@
 #
 
 echo “开始清理日志”
-find ../log -mtime +1 -name “*.log” -exec rm -rf {} \;
+find /ql/data/log -mtime +1 -name “*.log” -exec rm -rf {} \;
+#!/usr/bin/env bash
+find /ql/data/log -maxdepth 3 -type d -print -exec rmdir {} 2>/dev/null ;
 echo “清理日志完成”;
