@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #依赖安装，运行一次就好
 #1 1 1 1 1 jd_indeps.sh
-#new Env('Faker库脚本依赖安装');
+#new Env('jd脚本依赖安装');
 #
 
 npm_ver=`pnpm -v|awk -F. '{print $1}'`
