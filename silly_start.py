@@ -13,7 +13,7 @@ from time import sleep
 if __name__ == '__main__':
     print('重启傻妞')
     print('停止傻妞')
-    os.system('nsenter --mount=/host/proc/1/ns/mnt bash -c "ps -ef | grep sillyGirl | grep -v grep | awk '{print $2}' | xargs kill"')
+    os.system('nsenter --mount=/host/proc/1/ns/mnt bash -c "ps -ef | grep sillyGirl | grep -v grep | awk "'"{print $2}"'" | xargs kill"')
     sleep(5)
     print('启动傻妞')
     os.system('nsenter --mount=/host/proc/1/ns/mnt bash -c "cd /usr/local/sillyGirl && ./sillyGirl -d"')
