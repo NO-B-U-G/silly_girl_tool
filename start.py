@@ -1,6 +1,8 @@
-# 启动宿主机脚本 需要容器能执行宿主机
-#cron:11 11 11 11
-
+#!/bin/bash
+## 启动宿主机脚本 需要容器能执行宿主机
+#1 1 1 1 1 start.py
+#new Env('启动宿主机脚本');
+#
 
 import os
 from time import sleep

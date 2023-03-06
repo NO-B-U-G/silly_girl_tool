@@ -1,6 +1,8 @@
-# go-cqhttp(qq机器人)启动
-#cron:11 11 11 11
-
+#!/bin/bash
+#重启qq
+#1 1 1 1 1 qq_start.py
+#new Env('重启qq');
+#
 
 import os
 from time import sleep
@@ -10,8 +12,8 @@ from time import sleep
 if __name__ == '__main__':
     print('启动中')
     print('杀死进程')
-    os.system('pkill go-cqhttp')
+    os.system('nsenter --mount=/host/proc/1/ns/mnt bash -c "killall /usr/qq/go-cqhttp"')
     sleep(5)
-    os.system('cd /root/go-cqhttp && ./go-cqhttp -d')
+    os.system('nsenter --mount=/host/proc/1/ns/mnt bash -c "cd /usr/qq && ./go-cqhttp -d"')
     sleep(5)
     print('命令执行完成')
